@@ -2,6 +2,14 @@
 server1 ansible_host=3.253.70.206
 server2 ansible_host=3.253.33.138
 
+#Purpose of Using [servers:vars]
+#The [servers:vars] section is used to assign common variables to all hosts in the servers group. 
+#This avoids repeating the same configuration for each server and ensures consistency. 
+#It makes your inventory cleaner and easier to manage,especially when you have many hosts that share connection settings and Ansible requirements.
+
+#In summary:
+#Using [servers:vars] lets you set SSH connection details and runtime environment variables once for all servers hosts, streamlining your Ansible setu
+
 [servers:vars]
 ansible_user=ubuntu
 ansible_ssh_private_key_file=terra-ansible-multi-env/terraform/tws-terra-key
